@@ -1,0 +1,17 @@
+<div class="movie-container">
+  <app-main-header class="hehe"></app-main-header>
+  <cdk-virtual-scroll-viewport
+    itemSize="210"
+    class="infinite"
+    (scrolledIndexChange)="onScroll()"
+  >
+    <div class="flex_row">
+      <div
+        class="movie_card"
+        *cdkVirtualFor="let movie of movies; templateCacheSize: 10"
+      >
+        <app-movie-item [movie]="movie"></app-movie-item>
+      </div>
+    </div>
+  </cdk-virtual-scroll-viewport>
+</div>

@@ -1,0 +1,132 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main_container {
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: #e0e0e0;
+  margin: 20px 0;
+}
+
+/* Step and Plan Selection Sections */
+.step {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.p_1 {
+  font-size: 1.2em;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.p_2, .p_3, .p_4 {
+  display: flex;
+  align-items: center;
+  font-size: 1em;
+  margin: 10px 0;
+  color: #777;
+}
+
+.p_2 mat-icon, .p_3 mat-icon, .p_4 mat-icon {
+  color: #4caf50;
+  margin-right: 10px;
+}
+
+/* Table Styles */
+.plan_table {
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+th, td {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+th {
+  background-color: #f1f1f1;
+  font-size: 1.1em;
+}
+
+td {
+  font-size: 1em;
+}
+
+.horizontal-table tr td:first-child {
+  text-align: left;
+  font-weight: bold;
+}
+
+.mat-elevation-z8 {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  margin: 20px 0;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 1.2em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .step {
+    font-size: 1.2em;
+  }
+
+  .p_1 {
+    font-size: 1em;
+  }
+
+  .p_2, .p_3, .p_4 {
+    font-size: 0.9em;
+  }
+
+  th, td {
+    padding: 10px;
+  }
+
+  button {
+    font-size: 1em;
+  }
+}

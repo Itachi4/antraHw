@@ -1,0 +1,14 @@
+<nav>
+  <div class="header-content">
+    <div class="header-icon">
+      <img
+        class="header_img"
+        src="../assets/home/netflix_icon.png"
+        alt="Notflix_icon"
+        routerLink=""
+      />
+    </div>
+    <button class="btn" *ngIf="!isLogin" routerLink="/login">Sign in</button>
+    <button class="btn" *ngIf="isLogin" (click)="signOut()">Sign out</button>
+  </div>
+</nav>
