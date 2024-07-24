@@ -1,0 +1,40 @@
+/* src/app/display/display.component.css */
+.container {
+  display: flex;
+  height: 100vh;
+}
+.notes-list {
+  width: 200px;
+  background-color: #f4f4f4;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+.notes-list h1 {
+  margin-bottom: 15px;
+}
+.notes-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+.notes-list li {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.note-editor {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #fff;
+  border-left: 1px solid #ccc;
+}
+.note-editor input, .note-editor textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+.note-editor button {
+  margin-right: 10px;
+}

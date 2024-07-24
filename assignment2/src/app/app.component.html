@@ -1,0 +1,21 @@
+<div>
+  <input [(ngModel)]="searchText" type="text" placeholder="Type" class="form-control" />
+  <ul *ngIf="searchText">
+    <li *ngFor="let item of filteredItems" (click)="onfill(item)">{{ item }}</li>
+    <li *ngIf="filteredItems.length === 0">No results found</li>
+  </ul>
+</div>
+
+<hr>
+<hr>
+<br>
+<form #movieForm="ngForm">
+  <input type="checkbox" [(ngModel)]="selectAll" name="movies" (click)="onSelect()">selectAll
+  <ul>
+    @for(movie of movies; track movie.id){
+          <li>
+            <input type="checkbox" [(ngModel)]="movie.selected" name="{{movie.id}}" (click)="onEachMovie()"> {{movie.name}}
+          </li>
+    }
+  </ul>
+</form>

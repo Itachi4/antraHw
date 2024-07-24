@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="notes-list">
+      <h1>Notes</h1>
+      <ul>
+        @for( note of notes; track note.id){
+        <li>
+          <div (click)="onSelect(note)">
+            {{ note.title }}
+           
+                @if (selected && currentId === note.id) {
+                <p>{{ note.content }}</p>
+                }
+            <button (click)="onDelete(note.id);">[X]</button>
+          </div>
+        </li>
+    }
+      </ul>
+      <button (click)="onAdd()">+</button>
+    </div>
+    <div class="note-editor" *ngIf="selectedNote">
+        <input [(ngModel)]="selectedNote.title" placeholder="Title">
+        <textarea [(ngModel)]="selectedNote.content" placeholder="Contents"></textarea>
+        <button (click)="onRevert()">Revert</button>
+        <button (click)="onSave(selectedNote)">Save</button>
+    </div>
+</div>
