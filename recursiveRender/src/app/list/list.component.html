@@ -1,0 +1,7 @@
+<li>
+        <span (click)="onToggle()">{{menuItem.name}} {{expression}}</span>
+        <ul *ngIf="toggle && menuItem.child && menuItem.child.length>0">
+            <app-list *ngFor = "let child of menuItem.child" [menuItem]="child"></app-list>
+        </ul>
+
+</li>
