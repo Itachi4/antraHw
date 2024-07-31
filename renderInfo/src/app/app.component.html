@@ -1,0 +1,17 @@
+<div class="body">
+  <ul class="lv1">
+    <li *ngFor="let lv1 of getLevels() | keyvalue">
+      <h3>{{ lv1.key }}</h3>
+      <ul class="lv2">
+        <li *ngFor="let lv2 of lv1.value | keyvalue">
+          <h4>{{ lv2.key }}</h4>
+          <ul class="lv3">
+            <li *ngFor="let lv3 of lv2.value">
+              {{ lv3 }}
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
