@@ -1,0 +1,13 @@
+<button 
+  class="likeB" 
+  [ngClass]="{'active': isLikeButtonClicked}" 
+  (click)="onLike()">
+  Likes | {{initialLikes}}
+</button>
+
+<button 
+  class="dislikeB" 
+  [ngClass]="{'active': isDislikeButtonClicked}" 
+  (click)="onDislikes()">
+  Dislikes | {{initialDislikes}}
+</button>
