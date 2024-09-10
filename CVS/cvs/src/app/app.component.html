@@ -1,0 +1,41 @@
+<form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)" novalidate>
+  <div>
+    <label for="name">Name:</label>
+    <input
+      type="text"
+      id="name"
+      name="name"
+      [(ngModel)]="formData.name"
+      #name="ngModel"
+      required
+    />
+    <div *ngIf="name.invalid && name.touched">
+      <small class="error">Name is required</small>
+    </div>
+  </div>
+
+  <div>
+    <label for="message">Message:</label>
+    <textarea
+      id="message"
+      name="message"
+      [(ngModel)]="formData.message"
+      #message="ngModel"
+      required
+      minlength="10"
+    ></textarea>
+    <div *ngIf="message.invalid && message.touched">
+      <small class="error" *ngIf="message.errors?.['required']">Message is required</small>
+      <small class="error" *ngIf="message.errors?.['minlength']">Message must be at least 10 characters long</small>
+    </div>
+  </div>
+
+  <button type="submit" [disabled]="contactForm.invalid">Send Message</button>
+</form>
+
+<div *ngIf="submitted">
+  <h3>Thank you for contacting us. We will be in touch shortly!</h3>
+  <p>You have submitted the following message:</p>
+  <p><strong>Name:</strong> {{ submittedData.name }}</p>
+  <p><strong>Message:</strong> {{ submittedData.message }}</p>
+</div>
