@@ -1,17 +1,18 @@
-import { Component, NgModule } from '@angular/core';
-import { FormsModule, NgForm } from '@angular/forms';
-import { Router } from '@angular/router';
-import { DataService } from './data.service';
 import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
+import { FormsModule, NgForm } from '@angular/forms';
+import { RouterOutlet } from '@angular/router';
+import { DataService } from '../data.service';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-main',
   standalone: true,
-  imports: [CommonModule, FormsModule],
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  imports: [CommonModule, FormsModule, RouterOutlet],
+  templateUrl: './main.component.html',
+  styleUrls: ['./main.component.css']
 })
-export class AppComponent {
+export class MainComponent {
   formData = { name: '', message: '' };
 
   constructor(private router: Router, private dataService: DataService) {}
